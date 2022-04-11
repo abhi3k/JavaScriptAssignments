@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+
+    <script>
+
+        function switchOn() {
+            document.getElementById('oneA').src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        }
+        function switchOff() {
+            document.getElementById('oneA').src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        }
+
+        var state = false;
+        function turnSwitch() {
+            if (!state) {
+                document.getElementById('oneB').src = "https://www.w3schools.com/js/pic_bulbon.gif";
+                state = true;
+            } else {
+                document.getElementById('oneB').src = "https://www.w3schools.com/js/pic_bulboff.gif";
+                state = false;
+            }
+        }
+    </script>
+
+</head>
+
+<body style="text-align:center; background-color: aquamarine;">
+    <div id="twoButtons">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif
+        " alt="" id="oneA"> <br><br>
+        <button onclick="switchOn()">Turn ON</button>
+        <button onclick="switchOff()">Turn OFF</button>
+    </div>
+    <br><br>
+
+    <div id="oneButton">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="oneB">
+        <br>
+        <button onclick="turnSwitch()">Turn ON/OFF</button>
+    </div>
+
+
+
+</body>
+
+<script>
+
+</script>
+
+</html>
