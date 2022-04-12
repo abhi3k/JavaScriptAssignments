@@ -22,6 +22,7 @@ body{
     border-radius: 50px;
     color: white;
     cursor: pointer;
+    transition: all 650ms ease-in;
 }
 
 .panel h3{
@@ -40,6 +41,7 @@ body{
 .panel.active h3{
     opacity: 1;
     font-family: Menlo;
+    transition: opacity 605ms ease_in 500ms;
 }
 
 #panel-1{
