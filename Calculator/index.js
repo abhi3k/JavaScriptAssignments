@@ -11,8 +11,10 @@ function isOperator(opt){
 
 function btnClicked(buttonText){
     if(displayArea.innerText.length >= 24){ return; }
-
+    
     if(buttonText === 'CLR'){
+        document.getElementById('display1').innerText = '';
+
         displayArea.innerText = '0';
         return;
     }
@@ -25,7 +27,12 @@ function btnClicked(buttonText){
     }
 
     if(buttonText === '='){
-        displayArea.innerText = eval(displayArea.innerText);
+        try{
+            document.getElementById('display1').innerText = displayArea.innerText;
+            displayArea.innerText = eval(displayArea.innerText);
+        }catch(error){
+            displayArea.innerText = 0;
+        }
         return;
     }
 
@@ -36,6 +43,8 @@ function btnClicked(buttonText){
         }
         
         if(buttonText == '.' || isOperator(buttonText)){
+            let eq = displayArea.innerText;
+            if(eq.indexOf())
             displayArea.innerText = '0' + buttonText;
             return;
         }
@@ -47,7 +56,5 @@ function btnClicked(buttonText){
         }
         displayArea.innerText = displayArea.innerText + buttonText;
     }
-
-
 
 }
