@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container"> 
+        <h1><u>The Banking System</u></h1>       
+            <table id="tab">
+                <tr>
+                    <th>Account Holder Name</th>
+                    <th>Balance Amount</th>
+                    <th>Balance After Interest</th>
+                </tr>
+                <tr>
+                    <td class="names">Abhishek</td>
+                    <td><input type="Number" placeholder="AMOUNT" class="inputBalance"></td>
+                    <td><input type="Number" class="displayBalance" value="0" disabled></td>
+                </tr>
+                <tr>
+                    <td class="names">Another</td>
+                    <td><input type="Number" placeholder="AMOUNT" class="inputBalance"></td>
+                    <td><input type="Number" class="displayBalance"  value="0" disabled></td>
+                </tr>
+                <tr>
+                    <td class="names">Rakesh</td>
+                    <td><input type="Number" placeholder="AMOUNT" class="inputBalance"></td>
+                    <td><input type="Number" class="displayBalance" value="0" disabled></td>
+                </tr>
+                <tr>
+                    <td class="names">Ramesh</td>
+                    <td><input type="Number" placeholder="AMOUNT" class="inputBalance"></td>
+                    <td><input type="Number" class="displayBalance" value="0" disabled></td>
+                </tr>
+                <tr>
+                    <td class="names">Suresh</td>
+                    <td><input type="Number" placeholder="AMOUNT" class="inputBalance"></td>
+                    <td><input type="Number" class="displayBalance" value="0" disabled></td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="calculate()">Calculate Amounts</button>
+       
+    </div>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>
