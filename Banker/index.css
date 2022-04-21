@@ -1,0 +1,41 @@
+body{
+    background-image: linear-gradient(to left, aquamarine,greenyellow,aquamarine);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+#tab th,tr,td,table{    
+    font-family: Menlo;
+    padding: 5px;   
+    border: 2px solid black;
+    border-collapse:collapse;
+    background-image: linear-gradient(to left, orange,greenyellow,aquamarine);
+}
+
+#tab th{
+    padding: 20px;
+}
+
+.names{
+    font-family: Monaco;
+    font-weight: bolder;
+}
+
+td input{
+    width: 80%;
+    padding: 5px;
+}
+
+.container button{
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 1px 1px 0px 1px gray;
+}
+
