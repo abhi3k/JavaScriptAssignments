@@ -3,19 +3,23 @@
 function calculate() {
     let balances = document.getElementsByClassName('inputBalance');
     let availBal = document.getElementsByClassName('displayBalance');
+    let bankBalances = [];
 
     for (let i = 0; i < balances.length; i++) {
-        balances[i].value = Number(balances[i].value);
-        if (balances[i].value > 200000) {
-            availBal[i].value = Number(balances[i].value) + Number(balances[i].value) * 0.01;
-            availBal[i].value = balances[i].value - balances[i].value * 0.002;
-        } else if (balances[i].value > 100000) {
-            availBal[i].value = Number(balances[i].value) + Number(balances[i].value) * 0.05;
-            availBal[i].value = balances[i].value - balances[i].value * 0.0005;
-        } else {
-            availBal[i].value = Number(balances[i].value) + Number(balances[i].value) * 0.03;
-        }
+        bankBalances[i] = Number(balances[i].value);
+        if(bankBalances[i] > 200000){
+            bankBalances[i] = bankBalances[i] + bankBalances[i] * 0.1;
+            bankBalances[i] = bankBalances[i] - bankBalances[i] * 0.002;
+        }else if(bankBalances[i] > 100000){
+            bankBalances[i] = bankBalances[i] + bankBalances[i] * 0.5;
+            bankBalances[i] = bankBalances[i] - bankBalances[i] * 0.0005;
+        }else{
+            bankBalances[i] = bankBalances[i] + bankBalances[i] * 0.03;
+        } 
+        availBal[i].value = bankBalances[i];       
     }
+    console.log(bankBalances);
+
 }
 
 
