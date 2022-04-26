@@ -19,10 +19,10 @@
     <div class="container">
         <div class="registration-form">
             <h1 class="display-3 mb-3">Registration Form</h1>
-            <form class="row g-3 needs-validation" novalidate onsubmit="validate()">
+            <form class="row g-3 needs-validation" novalidate autocomplete="off">
                 <div class="col-md-4">
                     <label for="firstName" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="firstName" required>
+                    <input type="text" class="form-control" id="firstName" required onkeyup="setTouched('firstName')">
                     <div class="valid-feedback" id="firstNameValid">
                         Looks good!
                     </div>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="lastName" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="lastName" required>
+                    <input type="text" class="form-control" id="lastName" required onkeyup="setTouched('lastName')">
                     <div class="valid-feedback" id="lastNameValid">
                         Looks good!
                     </div>
@@ -45,7 +45,7 @@
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
-                            required>
+                            required onkeyup="setTouched('email')">
                         <div class="valid-feedback" id="emailValid">
                             Looks good!
                         </div>
@@ -55,8 +55,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="phoneNumber" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="phoneNumber" required>
+                    <label for="phoneNumber" class="form-label">Phone Number(+91 India)</label>
+                    <input type="text" class="form-control" id="phoneNumber" required maxlength="10" onkeyup="setTouched('phoneNumber')">
                     <div class="valid-feedback" id="phoneValid">
                         Looks good!
                     </div>
@@ -66,9 +66,31 @@
                 </div>
                 <div class="col-md-4">
                     <label for="state" class="form-label">State</label>
-                    <select class="form-select" id="state" required>
+                    <select class="form-select" id="state" required onkeyup="setTouched('state')">
                         <option selected disabled value="">Choose...</option>
-                        <option>...</option>
+                        <option value="AN">Andaman and Nicobar Islands</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CH">Chandigarh</option>
+                        <option value="CT">Chhattisgarh</option>
+                        <option value="DN">Dadra and Nagar Haveli</option>
+                        <option value="DD">Daman and Diu</option>
+                        <option value="DL">Delhi</option>
+                        <option value="GA">Goa</option>
+                        <option value="GJ">Gujarat</option>
+                        <option value="HR">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JK">Jammu and Kashmir</option>
+                        <option value="JH">Jharkhand</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="KL">Kerala</option>
+                        <option value="LA">Ladakh</option>
+                        <option value="LD">Lakshadweep</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="MN">Manipur</option>
                     </select>
                     <div class="valid-feedback" id="stateValid">
                         Looks good!
@@ -79,7 +101,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="zipCode" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="zipCode" required>
+                    <input type="text" class="form-control" id="zipCode" required maxlength="6" onkeyup="setTouched('zipCode')">
                     <div class="valid-feedback" id="zipValid">
                         Looks good!
                     </div>
@@ -89,12 +111,12 @@
                 </div>
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
+                        <input class="form-check-input" type="checkbox" id="check" required checked>
+                        <label class="form-check-label" for="check">
                             Agree to terms and conditions
                         </label>
-                        <div class="invalid-feedback">
-                            You must agree before submitting.
+                        <div class="invalid-feedback" id="invalidCheck">
+                            You must agree before submitting
                         </div>
                     </div>
                 </div>
