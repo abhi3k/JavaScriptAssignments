@@ -1,0 +1,36 @@
+div{
+    padding: 60px;
+    border: 2px solid black;
+    text-align: center;
+}
+input{
+    display:block;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border-radius: 8px;
+}
+button{
+    padding: 5px;
+    font-size: 1.2em;
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+p{
+    font-size: 1em;
+    display: none;
+}
+
+.valid{
+    color: green;
+}
+
+.invalid{
+    color: red;    
+}
