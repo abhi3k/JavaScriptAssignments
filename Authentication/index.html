@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Authentication</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="detail">
+        <ul>
+            Instructions to get your password authenticated
+            <li>Password should not be empty.</li>
+            <li>Minimum length 6 and Maximum length 10</li>
+            <li>Can only contain special character in (- or _ or @) and digits (0-9)</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="first">
+            <input type="password" id="create" placeholder="Create Password" onkeypress="validate()">
+                <p class="valid" id="signupValid">password saved successfully.!</p>
+                <p class="invalid" id="signupInvalid">Incorrect password.!</p>
+                <p class="invalid" id="em1">enter password according to the instruction</p>
+                <p class="valid" id="em2">weak password.!</p>
+                <p class="valid" id="em3">medium password.!</p>
+                <p class="valid" id="em4">strong password.!</p>
+            <button onclick="signup()">SignUp</button>
+        </div>
+        <hr>
+        <div class="second">
+            <input type="password" id="check" placeholder="Login Password">
+            <p class="valid" id="loginValid">password correct. Log in access granted</p>
+            <p class="invalid" id="loginInvalid">password incorrect. Log in denied</p>
+            <button onclick="login()">LogIn</button> 
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
