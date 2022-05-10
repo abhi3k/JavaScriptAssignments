@@ -1,0 +1,25 @@
+.main{
+    display: flex;    
+}
+.main div{
+    border: 1px solid black;    
+}
+/* #detail{
+    flex: 3;
+}
+
+#per{
+
+    flex: 9;
+} */
+
+#dp{
+    width: 80%;
+    height: 40%;
+}
+
+/* @media (max-width: 100){
+    .main{
+        flex: none;
+    }
+} */
