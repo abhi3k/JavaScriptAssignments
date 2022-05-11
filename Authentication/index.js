@@ -24,7 +24,9 @@ const lookup = {
     v:'s',w:'t',x:'u',y:'v',z:'w',
     '0':'7','1':'8','2':'9','3':'0','4':'1',
     '5':'2','6':'3','7':'4','8':'5','9':'6',
-    '-':'*', '_':'#', '@':'$', '#':'$', '$':'+'
+    '-':'*', '_':'#', '@':'$', '#':'$', '$':'+',
+    '.':'<',',':'<','!':'@','*':'^','^':'%','/':'+',
+    '+':'&','&':'.'
   };
 
 const encode = (input) => {
@@ -43,14 +45,23 @@ const decode = (coded) => {
 
 const signup = () => {
     let inputPassword = inpPassword.value
-    passwordDb = encode(inputPassword)
-    passCreateValid.style.display = 'block'
-    e1.style.display = 'none'
-    e2.style.display = 'none'
-    e3.style.display = 'none'
-    e4.style.display = 'none'
-    console.log(passwordDb)
-    console.log(decode(passwordDb))
+    if(inputPassword.length <= 6){
+        passCreateInvalid.style.display = 'block'
+        e1.style.display = 'none'
+        e2.style.display = 'none'
+        e3.style.display = 'none'
+        e4.style.display = 'none'
+        passCreateValid.style.display = 'none'
+    }else{
+        passwordDb = encode(inputPassword)
+        passCreateValid.style.display = 'block'
+        e1.style.display = 'none'
+        e2.style.display = 'none'
+        e3.style.display = 'none'
+        e4.style.display = 'none'
+        console.log(passwordDb)
+        console.log(decode(passwordDb))
+    }
 }
 
 const login = () => {
@@ -67,6 +78,7 @@ const login = () => {
 
 const validate = () => {
     passCreateValid.style.display = 'none'
+    passCreateInvalid.style.display = 'none'
     let word = inpPassword.value 
     if (word.length < 1) {
         e1.style.display = 'block'
