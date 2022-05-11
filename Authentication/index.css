@@ -1,10 +1,23 @@
-div{
-    padding: 60px;
+body{
+    background-color: orange;
+}
+.detail{
+    background-image: linear-gradient(to left, yellow,grey);
+    border: 2px solid black;
+    margin-bottom: 20px;
+    font-family: cursive;
+    font-size: 1.5em;
+}
+
+.first{
+    padding: 20px;
     border: 2px solid black;
     text-align: center;
+    background-image: linear-gradient(to left, yellow,grey);
 }
 input{
     display:block;
+    padding: 10px;
     margin: auto;
     margin-bottom: 15px;
     font-size: 1em;
@@ -23,12 +36,13 @@ button:hover{
 }
 
 p{
-    font-size: 1em;
+    font-size: 1.5em;
+    font-weight: bolder;
     display: none;
 }
 
 .valid{
-    color: green;
+    color: rgb(4, 130, 4);
 }
 
 .invalid{
