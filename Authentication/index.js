@@ -49,8 +49,8 @@ const signup = () => {
     e2.style.display = 'none'
     e3.style.display = 'none'
     e4.style.display = 'none'
-    // console.log(passwordDb)
-    // console.log(decode(passwordDb))
+    console.log(passwordDb)
+    console.log(decode(passwordDb))
 }
 
 const login = () => {
@@ -66,16 +66,23 @@ const login = () => {
 
 
 const validate = () => {
-    let word = inpPassword.value
+    passCreateValid.style.display = 'none'
+    let word = inpPassword.value 
     if (word.length < 1) {
         e1.style.display = 'block'
+        e2.style.display = 'none'
+        e3.style.display = 'none'
+        e4.style.display = 'none'
     } else if (word.length >= 1 && word.length <= 6) {
         e2.style.display = 'block'
         e1.style.display = 'none'
+        e3.style.display = 'none'
+        e4.style.display = 'none'
     } else if (word.length >= 7 && word.length <= 10) {
         e3.style.display = 'block'
         e2.style.display = 'none'
         e1.style.display = 'none'
+        e4.style.display = 'none'
     } else {
         e4.style.display = 'block'
         e1.style.display = 'none'
