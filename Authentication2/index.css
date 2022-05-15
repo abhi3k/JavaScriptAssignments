@@ -1,0 +1,16 @@
+.nav-link:hover{
+    cursor: pointer;
+}
+
+#signup-page, #login-page{
+    text-align: center;
+    padding: 10px;
+}
+
+#valid-alert, #invalid-alert{
+    display: none;
+}
+
+#contact-page, #about-page,#signup-page, #login-page{
+    display: none;
+}
