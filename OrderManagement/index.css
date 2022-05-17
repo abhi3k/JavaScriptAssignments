@@ -1,0 +1,35 @@
+body{
+    background-image: linear-gradient(to right, indianred, rgb(216, 227, 66))
+}
+.container{
+    text-align: center;
+    padding: 20px;
+    margin-top: 1em;
+}
+
+input{
+    padding: 10px 20px;
+    width: 400px;
+}
+
+button{
+    display: block;
+    padding: 10px 20px;
+    background-color: aquamarine;
+    border-radius: 12px;
+    font-size: 1.2em;
+    margin: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+div.status-block{
+    font-family: cursive;
+    font-size: 1.1em;
+    background-image: linear-gradient(to right, rgb(92, 137, 205), rgba(142, 106, 164, 0.614));
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin: 10px;
+}
