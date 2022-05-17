@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="order-id-input" placeholder="ENTER ORDER ID">
+      
+        <button onclick="executeOrder(() => {console.log('out to be shipped')})">Execute</button>
+
+        <div class="status-block" id="odr1">order placed</div>
+        <div class="status-block" id="odr2">Chef received the order and started preparing</div>
+        <div class="status-block" id="odr3">pizza sauce added</div>
+        <div class="status-block" id="odr4">first layer of cheese added</div>
+        <div class="status-block" id="odr5">Toppings added</div>
+        <div class="status-block" id="odr6">Second layer of cheese added</div>
+        <div class="status-block" id="odr7">pizza baked</div>
+        <div class="status-block" id="odr8">Oregano added and packed</div>
+        <div class="status-block" id="odr9">package received on the counter</div>
+        <div class="status-block" id="odr10">The order is ready and handed over to the Zomato guy!</div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
