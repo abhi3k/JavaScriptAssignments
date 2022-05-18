@@ -20,10 +20,14 @@
 <body>
 
     <div class="container">
-        <input type="text" id="order-id-input" placeholder="ENTER ORDER ID">
-      
-        <button onclick="executeOrder(() => {console.log('out to be shipped')})">Execute</button>
-
+        <div class="container-fluid">
+            <h1 id="head1">Enter your order id below</h1>
+            <input type="text" id="order-id-input" placeholder="ENTER ORDER ID">
+            <br>
+            <button type="button" onclick="executeOrder(() => {step10.style.display='block';console.log('out to be shipped')})">Execute</button>
+            <hr>
+        </div>
+        <h3 id="head2">Order Status</h3>
         <div class="status-block" id="odr1">order placed</div>
         <div class="status-block" id="odr2">Chef received the order and started preparing</div>
         <div class="status-block" id="odr3">pizza sauce added</div>
