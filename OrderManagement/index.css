@@ -3,26 +3,30 @@ body{
 }
 #head1{
     font-family: Menlo;
-    font-weight: bolder;    
-}
-
-#head2{
-    display: none;
+    font-weight: bolder;
 }
 .container{
-    text-align: center;   
-    padding: 20px;
+    text-align: center;
     margin-top: 1em;
+    height: 100vh;
 }
-
+#head2{
+    font-family: monospace;
+    font-size: 1.5em;
+}
 input{
     padding: 10px 20px;
-    width: 400px;
+    border-radius: 30px;
+    width: 500px;
+}
+input::-webkit-input-placeholder{
+    text-align: center;
 }
 
 button{
+    border: none;
     padding: 10px 20px;
-    background-color: aquamarine;
+    background-color: rgb(44, 217, 73);
     border-radius: 12px;
     font-size: 1.2em;
     margin: 10px;
@@ -32,12 +36,16 @@ button:hover{
 }
 
 div.status-block{
-    display: none;
     font-family: cursive;
-    font-size: 1.1em;
-    background-image: linear-gradient(to right, rgb(92, 137, 205), rgba(142, 106, 164, 0.614));
     border: 1px solid black;
-    border-radius: 10px;
     padding: 10px 0px;
-    margin: 10px;
+    margin: 5px;
+    width: 32%;
+    border-radius: 30px;
+    font-size: 1.1em;
+}
+
+.done{
+    background-color: green;
+    color: white;
 }

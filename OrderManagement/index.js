@@ -11,45 +11,51 @@ let step10 = document.getElementById('odr10')
 
 let odrStatus = document.getElementById('head2')
 
+let allOrder = document.getElementsByClassName('status-block')
+
+const addClassDone = (index) =>  allOrder[index].classList.add('done')
+
 const executeOrder = (callback) => {
-    const orderNo = document.getElementById('order-id-input')
-    odrStatus.innerHTML = 'Order status of : ' + orderNo.value
+    const orderNo = document.getElementById('order-id-input').value
+    let x = 0
+    odrStatus.innerHTML = 'Order status of : ' + orderNo
     odrStatus.style.display = 'block'
-    console.log('order placed')
+    // console.log('order placed')
     setTimeout(() => {
-        step1.style.display = 'block'
+        // step1.style.display = 'block'
+        addClassDone(x++)
         console.log('Chef received the order and started preparing')
 
         setTimeout(() => {
-            step2.style.display = 'block'
+            addClassDone(x++)
             console.log('pizza sauce added')
 
             setTimeout(() => {
-                step3.style.display = 'block'
+                addClassDone(x++)
                 console.log('first layer of cheese added')
 
                 setTimeout(() =>{
-                    step4.style.display = 'block'
+                    addClassDone(x++)
                     console.log('Toppings added')
 
                     setTimeout(() => {
-                        step5.style.display = 'block'
+                        addClassDone(x++)
                         console.log('Second layer of cheese added')
 
                         setTimeout(() => {
-                            step6.style.display = 'block'
+                            addClassDone(x++)
                             console.log('pizza baked')
 
                             setTimeout(() => {
-                                step7.style.display = 'block'
+                                addClassDone(x++)
                                 console.log('Oregano added and packed')
 
                                 setTimeout(() => {
-                                    step8.style.display = 'block'
+                                    addClassDone(x++)
                                     console.log('package received on the conter')
                                     
                                     setTimeout(() => {
-                                        step9.style.display = 'block'
+                                        addClassDone(x++)
                                         console.log('package received on the conter')
                                         callback()   
                                     }, 2000)
