@@ -18,6 +18,7 @@ const addClassDone = (index) =>  allOrder[index].classList.add('done')
 const executeOrder = (callback) => {
     const orderNo = document.getElementById('order-id-input').value
     let x = 0
+    addClassDone(x++)
     odrStatus.innerHTML = 'Order status of : ' + orderNo
     odrStatus.style.display = 'block'
     // console.log('order placed')
@@ -57,7 +58,7 @@ const executeOrder = (callback) => {
                                     setTimeout(() => {
                                         addClassDone(x++)
                                         console.log('package received on the conter')
-                                        callback()   
+                                        callback()
                                     }, 2000)
 
                                 }, 2000)
