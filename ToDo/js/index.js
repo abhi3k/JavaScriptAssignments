@@ -7,7 +7,7 @@ const createToDo = () => {
     year: "numeric",
     month: "long",
     day: "numeric",
-    hour: "num=eric",
+    hour: "numeric",
     minute: "numeric",
     second: "numeric",
   });
